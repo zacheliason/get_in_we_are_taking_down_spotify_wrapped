@@ -1,0 +1,8 @@
+*/album_art_dir/*
+*/album_art_dir/
+*/__pycache__/*
+__pycache__/*
+.DS_Store
+.idea/*
+*.json
+.idea

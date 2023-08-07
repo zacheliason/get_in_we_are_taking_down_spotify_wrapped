@@ -1,0 +1,11 @@
+name: spotify_env
+channels:
+  - conda-forge
+dependencies:
+  - matplotlib=3.3.4
+  - numpy=1.19.2
+  - pandas=1.2.3
+  - pillow=8.2.0
+  - requests=2.26.0
+  - scikit-learn=0.24.1
+  - scipy=1.7.1
