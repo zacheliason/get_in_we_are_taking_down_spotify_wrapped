@@ -3,6 +3,25 @@ import matplotlib.ticker as mtick
 import matplotlib.pyplot as plt
 import matplotlib
 
+
+def format_hours(float_hours):
+	if float_hours < 1:
+		minutes = int(float_hours * 60)
+		return f'{minutes} min'
+
+	elif float_hours < 30:
+		hours = int(float_hours)
+		minutes = int((hours - int(hours)) * 60)
+
+		if minutes > 0:
+			return f'{hours} hrs, {minutes} min'
+		else:
+			return f'{hours} hrs'
+	else:
+		hours = int(float_hours)
+		return f'{int(hours)} hrs'
+
+
 def get_axis_and_grid_colors():
 	axis_color = "#7a7a7a"
 	grid_color = "#d4d4d4"

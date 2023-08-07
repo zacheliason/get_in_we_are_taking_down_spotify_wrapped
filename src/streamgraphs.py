@@ -1,4 +1,4 @@
-from src.plot_formatting import set_font, get_discrete_colors, get_axis_and_grid_colors
+from src.plot_formatting import set_font, get_discrete_colors, get_axis_and_grid_colors, format_hours
 from matplotlib.dates import YearLocator, MonthLocator, DateFormatter
 from scipy.ndimage import gaussian_filter1d
 from matplotlib import pyplot as plt
@@ -9,15 +9,6 @@ import traceback
 import os
 
 pd.options.mode.chained_assignment = None
-
-
-def format_hours(hours):
-	if hours < 1:
-		return f'{int(hours*60)} min'
-	elif hours < 30:
-		return f'{int(hours)} hrs, {int((hours - int(hours))*60)} min'
-	else:
-		return f'{int(hours)} hrs'
 
 
 def gaussian_smooth(x, y, sd):
