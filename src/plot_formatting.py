@@ -14,12 +14,21 @@ def format_hours(float_hours):
 		minutes = int((hours - int(hours)) * 60)
 
 		if minutes > 0:
-			return f'{hours} hrs, {minutes} min'
+			min_string = f' {minutes} min'
 		else:
-			return f'{hours} hrs'
+			min_string = ''
+
+		hour_string = f'{int(hours)} hrs'
+
+		return f'{hour_string}{min_string}'
+
 	else:
 		hours = int(float_hours)
-		return f'{int(hours)} hrs'
+
+		if hours > 1:
+			return f'{int(hours)} hrs'
+		else:
+			return f'{int(hours)} hr'
 
 
 def get_axis_and_grid_colors():
